@@ -14,7 +14,7 @@ after_success:
            
   - echo "$DOCKER_PASS" | docker login -u "$DOCKER_ID" --password-stdin
 
-  - docker push -t hussainbani/multi-client 
-  - docker push -t hussainbani/multi-nginx 
-  - docker push -t hussainbani/multi-server
-  - docker push -t hussainbani/multi-worker
+  - docker push hussainbani/multi-client 
+  - docker push hussainbani/multi-nginx 
+  - docker push hussainbani/multi-server
+  - docker push hussainbani/multi-worker
