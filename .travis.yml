@@ -12,7 +12,7 @@ after_success:
   - docker build -t hussainbani/multi-server ./server
   - docker build -t hussainbani/multi-worker ./worker
            
-echo "$DOCKER_PASS" | docker login -u "$DOCKER_ID" --password-stdin
+  - echo "$DOCKER_PASS" | docker login -u "$DOCKER_ID" --password-stdin
 
   - docker push -t hussainbani/multi-client 
   - docker push -t hussainbani/multi-nginx 
